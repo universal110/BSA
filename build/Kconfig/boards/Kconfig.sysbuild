@@ -1,0 +1,2 @@
+# Load Sysbuild board Kconfig descriptions.
+osource "/Users/ibrahimahmed/zephyr-projects/zephyr/boards/nordic/nrf52840dk/Kconfig.sysbuild"

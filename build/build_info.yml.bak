@@ -1,0 +1,4 @@
+west:
+  command: /opt/homebrew/bin/west build -p always -b nrf52840dk/nrf52840 .
+  topdir: /Users/ibrahimahmed/zephyr-projects
+  version: 1.5.0

@@ -1,0 +1,3 @@
+"Embedded-Program.git":"/Users/ibrahimahmed/zephyr-projects/Embedded-Program.git":"/Users/ibrahimahmed/zephyr-projects/Embedded-Program.git"
+"cmsis_6":"/Users/ibrahimahmed/zephyr-projects/modules/hal/cmsis_6":"${ZEPHYR_CMSIS_6_CMAKE_DIR}"
+"hal_nordic":"/Users/ibrahimahmed/zephyr-projects/modules/hal/nordic":"${ZEPHYR_HAL_NORDIC_CMAKE_DIR}"

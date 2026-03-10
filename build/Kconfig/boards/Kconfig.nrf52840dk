@@ -1,0 +1,2 @@
+# Load board Kconfig descriptions.
+osource "/Users/ibrahimahmed/zephyr-projects/zephyr/boards/nordic/nrf52840dk/Kconfig.nrf52840dk"
