@@ -72,6 +72,7 @@
 struct eventTracker {
     int eventidx;
     int64_t timestamp;
+    int64_t wristDeviation;
 };
 
 struct eventSession {

@@ -60,6 +60,8 @@ static void motionTrackerPrintResults(void);
 
 static struct eventSession currentSession;
 static bool sessionActive = false;
+static float wrist_roll = 0.0f;   // wrist rotating as ball is released
+static float wrist_snap = 0.0f;   // wrist snapping forward on follow through
 
 
 
