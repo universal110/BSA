@@ -1,48 +1,46 @@
-/*
- * main.c
- *
- * This file is the entry point of the program.
- * Its only jobs are:
- *   1. Initialize the motion tracker system
- *   2. Run the main loop that checks buttons and calls the right functions
- *
- * All session logic, data, and metrics live in motionTracker.c
- * This file just drives the state machine.
- */
-
-
 #include <zephyr/kernel.h> 
 #include <zephyr/sys/printk.h>
 #include "BTN.h"
 #include "motionTrackerInterface.h"
-
+#include "sensor.h"
 
 #define SLEEP_MS 1
 
 int main(void) {
 
-    // Initialize the motion tracker, sets up buttons and clears session data
-    // If it returns less than 0, something went wrong 
+    k_msleep(3000);
     int rv = motionTrackerInit();
     if (0 > rv) {
         printk("Motion tracker initialization failed\n");
         return 0;
     }
 
-    // Main loop — runs forever, checking each button on every iteration
+    // tracks the last time an event was recorded
+    // prevents one flick from recording multiple events
+    int64_t lastEventTime = 0;
+
     while (1) {
 
-        // BTN1 — start a new session
+        // start a new session, records baseline orientation
         if (BTN_check_clear_pressed(BTN0)) {
             startMotionSessions();
         }
 
-        // BTN0 — record a motion event
-        if (BTN_check_clear_pressed(BTN1)) {
-            recordMotionEvents();
+        // automatic motion detection which replaces BTN1
+        // reads total accelerometer force and records event
+        // if it exceeds threshold and cooldown has passed
+        if (motionTrackerIsActive()) {
+            float magnitude = sensorGetMagnitude();
+            int64_t now = k_uptime_get();
+
+            // threshold 
+            if (magnitude > 28000.0f && (now - lastEventTime) > 500) {
+                recordMotionEvents();
+                lastEventTime = now;
+            }
         }
 
-        // BTN2 — end the session and print all metrics
+        // BTN2: end the session and print all metrics
         if (BTN_check_clear_pressed(BTN2)) {
             endMotionSession();
         }

@@ -186,6 +186,9 @@
 /Users/ibrahimahmed/zephyr-projects/EIE/BSA/build/zephyr/drivers/gpio/CMakeFiles/drivers__gpio.dir
 /Users/ibrahimahmed/zephyr-projects/EIE/BSA/build/zephyr/drivers/gpio/CMakeFiles/edit_cache.dir
 /Users/ibrahimahmed/zephyr-projects/EIE/BSA/build/zephyr/drivers/gpio/CMakeFiles/rebuild_cache.dir
+/Users/ibrahimahmed/zephyr-projects/EIE/BSA/build/zephyr/drivers/i2c/CMakeFiles/drivers__i2c.dir
+/Users/ibrahimahmed/zephyr-projects/EIE/BSA/build/zephyr/drivers/i2c/CMakeFiles/edit_cache.dir
+/Users/ibrahimahmed/zephyr-projects/EIE/BSA/build/zephyr/drivers/i2c/CMakeFiles/rebuild_cache.dir
 /Users/ibrahimahmed/zephyr-projects/EIE/BSA/build/zephyr/drivers/pinctrl/CMakeFiles/drivers__pinctrl.dir
 /Users/ibrahimahmed/zephyr-projects/EIE/BSA/build/zephyr/drivers/pinctrl/CMakeFiles/edit_cache.dir
 /Users/ibrahimahmed/zephyr-projects/EIE/BSA/build/zephyr/drivers/pinctrl/CMakeFiles/rebuild_cache.dir

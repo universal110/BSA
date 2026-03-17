@@ -15,4 +15,5 @@ zephyr_include_directories(src/devices)
 target_sources(app PRIVATE
     src/main.c
     src/motionTracker.c
+    src/sensor.c
 )

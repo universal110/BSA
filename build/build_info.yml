@@ -29,9 +29,6 @@ cmake:
      - '/Users/ibrahimahmed/zephyr-projects/zephyr/dts/arc'
      - '/Users/ibrahimahmed/zephyr-projects/zephyr/dts'
   kconfig:
-    files:
-     - '/Users/ibrahimahmed/zephyr-projects/zephyr/boards/nordic/nrf52840dk/nrf52840dk_nrf52840_defconfig'
-     - '/Users/ibrahimahmed/zephyr-projects/EIE/BSA/prj.conf'
     user-files:
      - '/Users/ibrahimahmed/zephyr-projects/EIE/BSA/prj.conf'
   toolchain:
